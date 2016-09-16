@@ -1,0 +1,42 @@
+#!/usr/clearos/sandbox/usr/bin/php
+<?php
+
+/**
+ * Redwood auto configure helper.
+ *
+ * @category   apps
+ * @package    content-filter-business
+ * @subpackage scripts
+ * @author     ClearCenter <developer@clearcenter.com>
+ * @copyright  2016 ClearCenter
+ * @license    http://www.clearcenter.com/app_license ClearCenter license
+ * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ */
+
+///////////////////////////////////////////////////////////////////////////////
+// B O O T S T R A P
+///////////////////////////////////////////////////////////////////////////////
+
+$bootstrap = getenv('CLEAROS_BOOTSTRAP') ? getenv('CLEAROS_BOOTSTRAP') : '/usr/clearos/framework/shared';
+require_once $bootstrap . '/bootstrap.php';
+
+///////////////////////////////////////////////////////////////////////////////
+// T R A N S L A T I O N S
+///////////////////////////////////////////////////////////////////////////////
+
+clearos_load_language('content_filter_business');
+
+///////////////////////////////////////////////////////////////////////////////
+// D E P E N D E N C I E S
+///////////////////////////////////////////////////////////////////////////////
+
+use \clearos\apps\content_filter_business\Redwood as Redwood;
+
+clearos_load_library('content_filter_business/Redwood');
+
+///////////////////////////////////////////////////////////////////////////////
+// M A I N
+///////////////////////////////////////////////////////////////////////////////
+
+$redwood = new Redwood();
+$redwood->auto_configure();
