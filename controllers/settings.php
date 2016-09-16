@@ -4,12 +4,12 @@
  * Redwood global settings controller.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage controllers
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,12 +20,12 @@
  * Redwood global settings controller.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage controllers
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 class Settings extends ClearOS_Controller
@@ -76,8 +76,8 @@ class Settings extends ClearOS_Controller
         // Load dependencies
         //------------------
 
-        $this->lang->load('content_filter_business');
-        $this->load->library('content_filter_business/Redwood');
+        $this->lang->load('redwood_content_filter');
+        $this->load->library('redwood_content_filter/Redwood');
 
         // Set validation rules
         //---------------------
@@ -91,7 +91,7 @@ class Settings extends ClearOS_Controller
 
                 $this->page->set_status_updated();
 
-                redirect('/content_filter_business/settings');
+                redirect('/redwood_content_filter/settings');
             } catch (Exception $e) {
                 $this->page->view_exception($e);
                 return;
@@ -110,6 +110,6 @@ class Settings extends ClearOS_Controller
         // Load views
         //-----------
 
-        $this->page->view_form('content_filter_business/settings', $data, lang('content_filter_business_global_settings'));
+        $this->page->view_form('redwood_content_filter/settings', $data, lang('base_settings'));
     }
 }

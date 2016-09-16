@@ -4,19 +4,19 @@
  * Redwood class.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage libraries
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
 // N A M E S P A C E
 ///////////////////////////////////////////////////////////////////////////////
 
-namespace clearos\apps\content_filter_business;
+namespace clearos\apps\redwood_content_filter;
 
 ///////////////////////////////////////////////////////////////////////////////
 // B O O T S T R A P
@@ -29,7 +29,7 @@ require_once $bootstrap . '/bootstrap.php';
 // T R A N S L A T I O N S
 ///////////////////////////////////////////////////////////////////////////////
 
-clearos_load_language('content_filter_business');
+clearos_load_language('redwood_content_filter');
 
 ///////////////////////////////////////////////////////////////////////////////
 // D E P E N D E N C I E S
@@ -64,12 +64,12 @@ use \Exception as Exception;
  * Redwood class.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage libraries
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 class Redwood extends Daemon

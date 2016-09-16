@@ -4,20 +4,20 @@
 // General information
 /////////////////////////////////////////////////////////////////////////////
 
-$app['basename'] = 'content_filter_business';
+$app['basename'] = 'redwood_content_filter';
 $app['version'] = '1.0.0';
 $app['release'] = '1';
-$app['vendor'] = 'ClearCenter';
-$app['packager'] = 'ClearCenter';
-$app['license'] = 'Proprietary';
-$app['license_core'] = 'Proprietary';
-$app['description'] = lang('content_filter_business_app_description');
+$app['vendor'] = 'ClearFoundation';
+$app['packager'] = 'ClearFoundation';
+$app['license'] = 'GPLv3';
+$app['license_core'] = 'LGPLv3';
+$app['description'] = lang('redwood_content_filter_app_description');
 
 /////////////////////////////////////////////////////////////////////////////
 // App name and categories
 /////////////////////////////////////////////////////////////////////////////
 
-$app['name'] = lang('content_filter_business_app_name');
+$app['name'] = lang('redwood_content_filter_app_name');
 $app['category'] = lang('base_category_gateway');
 $app['subcategory'] = lang('base_subcategory_content_filter_and_proxy');
 
@@ -25,7 +25,7 @@ $app['subcategory'] = lang('base_subcategory_content_filter_and_proxy');
 // Controllers
 /////////////////////////////////////////////////////////////////////////////
 
-$app['controllers']['content_filter']['title'] = lang('content_filter_business_app_name');
+$app['controllers']['content_filter']['title'] = lang('redwood_content_filter_app_name');
 $app['controllers']['settings']['title'] = lang('base_settings');
 $app['controllers']['policy']['title'] = lang('base_app_policy');
 
@@ -52,19 +52,19 @@ $app['core_requires'] = array(
 );
 
 $app['core_directory_manifest'] = array(
-    '/var/clearos/content_filter_business' => array(),
+    '/var/clearos/redwood_content_filter' => array(),
 );
 
 $app['core_file_manifest'] = array(
-    'content_filter_business.acl'=> array('target' => '/var/clearos/base/access_control/public/content_filter_business'),
+    'redwood_content_filter.acl'=> array('target' => '/var/clearos/base/access_control/public/redwood_content_filter'),
     'redwood-filter.php'=> array('target' => '/var/clearos/base/daemon/redwood-filter.php'),
     'network-configuration-event'=> array(
-        'target' => '/var/clearos/events/network_configuration/content_filter_business',
+        'target' => '/var/clearos/events/network_configuration/redwood_content_filter',
         'mode' => '0755'
     )
 );
 
 $app['delete_dependency'] = array(
-    'app-content-filter-business-core',
+    'app-redwood-content-filter-core',
     'redwood-filter'
 );

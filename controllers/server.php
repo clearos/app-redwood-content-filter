@@ -4,12 +4,12 @@
  * Redwood daemon controller.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage controllers
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -33,12 +33,12 @@ require clearos_app_base('base') . '/controllers/daemon.php';
  * Redwood daemon controller.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage controllers
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 class Server extends Daemon
@@ -49,6 +49,6 @@ class Server extends Daemon
 
     function __construct()
     {
-        parent::__construct('redwood-filter', 'content_filter_business');
+        parent::__construct('redwood-filter', 'redwood_content_filter');
     }
 }

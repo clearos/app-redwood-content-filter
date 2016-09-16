@@ -4,12 +4,12 @@
  * Warning view.
  *
  * @category   apps
- * @package    content-filter
+ * @package    redwood-content-filter
  * @subpackage views
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -18,7 +18,7 @@
 
 $this->lang->load('base');
 $this->lang->load('network');
-$this->lang->load('content_filter_business');
+$this->lang->load('redwood_content_filter');
 
 ///////////////////////////////////////////////////////////////////////////////
 // Form 
@@ -29,11 +29,11 @@ $content = '';
 
 // Address
 if (!empty($url))
-    $content .= '<p><strong>' . lang('content_filter_business_web_address') . '</strong></p><p>' . $url . '</p>';
+    $content .= '<p><strong>' . lang('redwood_content_filter_web_address') . '</strong></p><p>' . $url . '</p>';
 
 // User
 if (!empty($user))
-    $content .= '<p><strong>' . lang('content_filter_business_user') . '</strong></p><p>' . $user . '</p>';
+    $content .= '<p><strong>' . lang('redwood_content_filter_user') . '</strong></p><p>' . $user . '</p>';
 
 // IP
 if (!empty($ip))
@@ -41,7 +41,7 @@ if (!empty($ip))
 
 // Categories
 if (!empty($categories)) {
-    $content .= '<p><strong>' . lang('content_filter_business_categories') . '</strong></p><ul>';
+    $content .= '<p><strong>' . lang('redwood_content_filter_categories') . '</strong></p><ul>';
     foreach ($categories as $category)
         $content .= '<li>' . $category . '</li>';
     $content .= '</ul>';
@@ -49,13 +49,13 @@ if (!empty($categories)) {
 
 // Scores
 if (!empty($scores)) {
-    $content .= '<p><strong>' . lang('content_filter_business_scores') . '</strong></p><ul>';
+    $content .= '<p><strong>' . lang('redwood_content_filter_scores') . '</strong></p><ul>';
     foreach ($scores as $category => $score)
         $content .= '<li>' . $category . ': ' . $score . '</li>';
     $content .= '</ul>';
 }
 
-echo box_open(lang('content_filter_business_content_filter_warning'));
+echo box_open(lang('redwood_content_filter_content_filter_warning'));
 echo box_content_open();
 echo box_content($content);
 echo box_content_close();

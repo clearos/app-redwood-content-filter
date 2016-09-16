@@ -1,25 +1,25 @@
 <?php
 
 /**
- * Content Filter for Business controller.
+ * Redwood Content Filter settings view.
  *
  * @category   apps
- * @package    content-filter-business
+ * @package    redwood-content-filter
  * @subpackage views
- * @author     ClearCenter <developer@clearcenter.com>
- * @copyright  2016 ClearCenter
- * @license    http://www.clearcenter.com/app_license ClearCenter license
- * @link       http://www.clearcenter.com/support/documentation/clearos/content_filter_business/
+ * @author     ClearFoundation <developer@clearfoundation.com>
+ * @copyright  2016 ClearFoundation
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
+ * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
 // Load dependencies
 ///////////////////////////////////////////////////////////////////////////////
 
-$this->lang->load('content_filter_business');
+$this->lang->load('redwood_content_filter');
 
 ///////////////////////////////////////////////////////////////////////////////
 // Form
 ///////////////////////////////////////////////////////////////////////////////
 
-echo infobox_highlight(lang('content_filter_business_app_name'), '...');
+echo infobox_highlight(lang('redwood_content_filter_app_name'), '...');

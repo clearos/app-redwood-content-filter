@@ -11,7 +11,7 @@ require_once $bootstrap . '/bootstrap.php';
 // T R A N S L A T I O N S
 ///////////////////////////////////////////////////////////////////////////////
 
-clearos_load_language('content_filter_business');
+clearos_load_language('redwood_content_filter');
 
 ///////////////////////////////////////////////////////////////////////////////
 // C O N F I G L E T
@@ -20,9 +20,9 @@ clearos_load_language('content_filter_business');
 // FIXME: add pid after systemd script fixed
 //	'pid_file' => '/var/run/redwood-filter/redwood-filter.pid',
 $configlet = array(
-	'title' => lang('content_filter_business_app_name'),
+	'title' => lang('redwood_content_filter_app_name'),
 	'package' => 'redwood-filter',
 	'process_name' => 'redwood-filter',
 	'reloadable' => FALSE,
-	'url' => '/app/content_filter_business'
+	'url' => '/app/redwood_content_filter'
 );

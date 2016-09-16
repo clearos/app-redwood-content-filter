@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Redwood warning controller.
+ * Redwood Content Filter controller.
  *
  * @category   apps
  * @package    redwood-content-filter
@@ -17,7 +17,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * Redwood warning controller.
+ * Redwood Content Filter controller.
  *
  * @category   apps
  * @package    redwood-content-filter
@@ -28,10 +28,10 @@
  * @link       http://www.clearfoundation.com/docs/developer/apps/redwood_content_filter/
  */
 
-class Warning extends ClearOS_Controller
+class Redwood_Content_Filter extends ClearOS_Controller
 {
     /**
-     * Content filter warning overview.
+     * Redwood Content Filter default controller.
      *
      * @return view
      */
@@ -43,29 +43,14 @@ class Warning extends ClearOS_Controller
 
         $this->lang->load('redwood_content_filter');
 
-        // View data
-        //----------
-
-        // FIXME
-        // Note: if 'User' data is an IP, set data['ip'], otherwise set data['user'];
-        $data['categories'] = array('Drugs', 'Violence');
-        $data['url'] = 'http://www.example.org';
-        $data['user'] = 'testguy';
-        $data['ip'] = '192.168.1.100';
-        $data['scores'] = array(
-            'drugs' => 1200,
-            'violence' => 200,
-        );
-
-        // Trim down long URLs
-        if (strlen($data['url']) > 60)
-            $data['url'] = substr($data['url'], 0, 60) . ' ...';
-
         // Load views
         //-----------
 
-        $page['type'] = MY_Page::TYPE_SPLASH_ORGANIZATION;
+        $views = array(
+            'redwood_content_filter/server',
+            'redwood_content_filter/settings',
+        );
 
-        $this->page->view_form('redwood_content_filter/warning', $data, lang('redwood_content_filter_content_filter_warning'), $page);
+        $this->page->view_forms($views, lang('redwood_content_filter_app_name'));
     }
 }
